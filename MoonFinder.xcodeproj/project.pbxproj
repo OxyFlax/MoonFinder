@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A08EA321CCB5E7D003B50AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08EA311CCB5E7D003B50AC /* AppDelegate.swift */; };
-		3A08EA341CCB5E7D003B50AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08EA331CCB5E7D003B50AC /* ViewController.swift */; };
 		3A08EA371CCB5E7D003B50AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A08EA351CCB5E7D003B50AC /* Main.storyboard */; };
 		3A08EA391CCB5E7D003B50AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A08EA381CCB5E7D003B50AC /* Assets.xcassets */; };
 		3A08EA3C1CCB5E7D003B50AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A08EA3A1CCB5E7D003B50AC /* LaunchScreen.storyboard */; };
 		3A08EA471CCB5E7D003B50AC /* MoonFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A08EA461CCB5E7D003B50AC /* MoonFinderTests.swift */; };
+		3A4E74051CCB824C00E462AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E74041CCB824C00E462AD /* ViewController.swift */; };
+		3A4E74081CCB841D00E462AD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E74071CCB841D00E462AD /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,6 @@
 /* Begin PBXFileReference section */
 		3A08EA2E1CCB5E7D003B50AC /* MoonFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A08EA311CCB5E7D003B50AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A08EA331CCB5E7D003B50AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A08EA361CCB5E7D003B50AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A08EA381CCB5E7D003B50AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A08EA3B1CCB5E7D003B50AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		3A08EA421CCB5E7D003B50AC /* MoonFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A08EA461CCB5E7D003B50AC /* MoonFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonFinderTests.swift; sourceTree = "<group>"; };
 		3A08EA481CCB5E7D003B50AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4E74041CCB824C00E462AD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A4E74071CCB841D00E462AD /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = Helper/UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		3A08EA301CCB5E7D003B50AC /* MoonFinder */ = {
 			isa = PBXGroup;
 			children = (
+				3A4E74061CCB83FB00E462AD /* Helper */,
+				3A4E74041CCB824C00E462AD /* ViewController.swift */,
 				3A08EA311CCB5E7D003B50AC /* AppDelegate.swift */,
-				3A08EA331CCB5E7D003B50AC /* ViewController.swift */,
 				3A08EA351CCB5E7D003B50AC /* Main.storyboard */,
 				3A08EA381CCB5E7D003B50AC /* Assets.xcassets */,
 				3A08EA3A1CCB5E7D003B50AC /* LaunchScreen.storyboard */,
@@ -94,6 +97,14 @@
 				3A08EA481CCB5E7D003B50AC /* Info.plist */,
 			);
 			path = MoonFinderTests;
+			sourceTree = "<group>";
+		};
+		3A4E74061CCB83FB00E462AD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3A4E74071CCB841D00E462AD /* UIViewExtensions.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A08EA341CCB5E7D003B50AC /* ViewController.swift in Sources */,
+				3A4E74051CCB824C00E462AD /* ViewController.swift in Sources */,
+				3A4E74081CCB841D00E462AD /* UIViewExtensions.swift in Sources */,
 				3A08EA321CCB5E7D003B50AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +400,7 @@
 				3A08EA4D1CCB5E7D003B50AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A08EA4E1CCB5E7D003B50AC /* Build configuration list for PBXNativeTarget "MoonFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +409,7 @@
 				3A08EA501CCB5E7D003B50AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
